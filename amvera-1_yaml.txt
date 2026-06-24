@@ -1,0 +1,10 @@
+meta:
+  environment: python
+  toolchain:
+    name: pip
+    version: "3.11"
+
+run:
+  command: gunicorn --bind 0.0.0.0:80 motivator_bot:app
+  containerPort: 80
+  persistent: true
